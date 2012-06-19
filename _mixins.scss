@@ -1,0 +1,45 @@
+//************************************************************************************
+// MODULES & MIXINS
+//************************************************************************************
+
+
+
+// Mixins
+// -----------------------------------------------------------------------------------
+
+@mixin clearfix {
+  zoom: 1; 
+  height: 0;
+  content: "\0020"; 
+  display: block; 
+  overflow: hidden; 
+
+  &:before, &:after { 
+    content: ""; 
+    display: table; 
+  }
+
+  &:after { 
+    clear: both; 
+  }
+}
+
+
+// Legacy support for inline-block in IE7 (maybe IE6)
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+
+
+// Set the border-radius for either all sides or a specified one
+@mixin add-border-radius( $border-radius-position: all, $border-radius: 2px ) {
+	@if $border-radius-position == 'all' {
+		border-radius: $border-radius;
+	} @else {
+		border-#{ $border-radius-position }-radius: $border-radius;
+	}
+}

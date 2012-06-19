@@ -1,0 +1,40 @@
+//************************************************************************************
+// TYPOGRAPHY
+//************************************************************************************
+
+
+// Headings
+// -----------------------------------------------------------------------------------
+
+// Define a reusable & flexible class for each heading, which can be used everywhere
+// in the page to replicate the style of the headings while keeping a clean structure.
+// http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+h1, .alpha { 
+  font-size: 3em; 
+  margin-bottom: 1em;
+}
+
+h2, .beta { 
+  font-size: 2.250em;
+  margin-bottom: 0.75em;
+}
+
+h3, .gamma { 
+  font-size: 1.75em; 
+  margin-bottom: 0.5em;
+}
+
+h4, .delta { 
+  font-size: 1.375em; 
+  margin-bottom: 0.5em;
+}
+
+h5, .epsilon { 
+  font-size: 1.125em;
+    margin-bottom: 0.5em;
+}
+
+h6, .zeta { 
+  font-size: 1em;
+  margin-bottom: 0; 
+}

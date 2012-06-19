@@ -1,0 +1,46 @@
+//************************************************************************************
+// MEDIA QUERIES
+//************************************************************************************
+
+
+// Smaller than standard 960 (devices and browsers)
+@media only screen and ( max-width: 959px ) {
+  
+}
+
+
+// Tablet Portrait size to standard 960 (devices and browsers)
+@media only screen and ( min-width: 768px ) and ( max-width: 959px ) {
+  
+  // Note: Design for a width of 768px
+  .wrapper { width: 768px; }
+
+}
+
+
+// All Mobile Sizes (devices and browser)
+@media only screen and ( max-width: 767px ) {
+  
+  // Note: Design for a width of 320px
+  .wrapper { width: 300px; }
+
+  // When viewing the page in a mobile, optimize by hiding all the
+  // the images from the wrapper content
+  .wrapper img { display: none; }
+
+}
+
+
+// Mobile Landscape Size to Tablet Portrait (devices and browsers)
+@media only screen and ( min-width: 480px ) and ( max-width: 767px ) {
+  
+  // Note: Design for a width of 480px
+  .wrapper { width: 420px; }
+
+}
+
+
+// Mobile Portrait Size to Mobile Landscape Size (devices and browsers)
+@media only screen and ( max-width: 479px ) {
+  
+}

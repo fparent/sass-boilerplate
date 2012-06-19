@@ -1,0 +1,102 @@
+//************************************************************************************
+// UTILITY
+//************************************************************************************
+
+
+// Cleaner approach to the popular method "text-indent: -9999px" for hidding text when
+// using a background image.
+// Prevent the browser form "painting" a huge container and increase perf on iPad 1
+// http://nicolasgallagher.com/another-css-image-replacement-technique
+.hide-text, .ir {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+
+// Hide for both screenreaders and browsers:
+// css-discuss.incutio.com/wiki/Screenreader_Visibility
+.hidden, .hide { 
+	display: none; 
+}
+
+
+.visible, .show {
+	display: block;
+}
+
+
+.invisible { 
+  visibility: hidden;
+}
+
+
+// Using the Clip Method, hide visually but NOT from screenreaders.
+// This is a best practice for accessibility. For more information:
+// http://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
+// Clip Method: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+.visuallyhidden {
+  position: absolute !important;
+  height: 1px; width: 1px; 
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+// The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+// j.mp/bestclearfix
+// Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page 
+.clearfix { 
+  *zoom: 1; 
+  height: 0;
+  content: "\0020"; 
+  display: block; 
+  overflow: hidden; 
+
+  &:before, &:after { 
+    content: ""; 
+    display: table; 
+  }
+
+  &:after { 
+    clear: both; 
+  }
+}
+
+
+// You can use a class="clear" to clear floating elements
+.clear, .clearer {
+  clear: both;
+  display: block;
+}
+
+
+// Reusable text alignment class
+.align-left    { text-align: left; }
+.align-center  { text-align: center; }
+.align-right   { text-align: right; }
+
+
+// Float element to the left or right
+.right  { float: right; }
+.left   { float: left;}
+
+
+// If the element floated is an image, add some spacing next to it
+img.left  { margin-right: 1em; }
+img.right { margin-left: 1em; }
+
+
+// Generic reusable spacers
+.no-margin      { margin: 0; }
+.space-top      { margin-top: 2.500em; }
+.space-right    { margin-right: 2.500em; }
+.space-bottom   { margin-bottom: 2.500em; }
+.space-left     { margin-left: 2.500em; }
+
+
+// Sometimes some elements need to be exceptionnaly displayed differently
+.block        { display: block; }
+.inline-block { display: inline-block; }

@@ -1,0 +1,24 @@
+//************************************************************************************
+// STRUCTURE
+// header, footer, wrapper, layout (split, full, tiers), boxes, container, etc.
+//************************************************************************************
+@import "../mixins";
+
+.wrapper { 
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+
+    // Self Clearing Goodness
+    @include clearfix;
+}
+
+
+.content {
+  position: relative;
+}
+
+
+.full 	{ }
+.split 	{ }
+.tiers	{ }
