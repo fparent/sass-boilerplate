@@ -53,6 +53,12 @@ CSS pre-processor.
 better idea to name the class of specific button "btn-big-red" instead of "btn".
 (Help! My Stylesheets are a Mess!)
 
+- Keep your CSS selectors short! To increase efficiency and reduces chances of 
+selector breakage, a good rule of thumb is to use, when possible, a maximum of 
+3 selectors: .module > .box .title
+
+
+
 
                           - Remove after reading -
 

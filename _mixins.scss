@@ -3,9 +3,18 @@
 //************************************************************************************
 
 
-
 // Mixins
 // -----------------------------------------------------------------------------------
+
+// Use REM in modern browsers and fallback to pixels for IE8-
+// http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+@mixin font-size($sizeValue: 1.6, $line: $sizeValue * 1.5){
+  font-size: ($sizeValue * 1) + px;
+  line-height: ($line * 1) + px;
+  font-size: ($sizeValue / 10) + rem;
+  line-height: ($line / 10) + rem;
+}
+
 
 @mixin clearfix {
   zoom: 1; 

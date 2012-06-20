@@ -1,6 +1,7 @@
 //************************************************************************************
 // TYPOGRAPHY
 //************************************************************************************
+@import "../mixins";
 
 
 // Headings
@@ -10,31 +11,30 @@
 // in the page to replicate the style of the headings while keeping a clean structure.
 // http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
 h1, .alpha { 
-  font-size: 3em; 
+  @include font-size(48);
   margin-bottom: 1em;
 }
 
 h2, .beta { 
-  font-size: 2.250em;
+  @include font-size(36);
   margin-bottom: 0.75em;
 }
 
 h3, .gamma { 
-  font-size: 1.75em; 
+  @include font-size(28);
   margin-bottom: 0.5em;
 }
 
 h4, .delta { 
-  font-size: 1.375em; 
+  @include font-size(22);
   margin-bottom: 0.5em;
 }
 
 h5, .epsilon { 
-  font-size: 1.125em;
-    margin-bottom: 0.5em;
+  @include font-size(18);
+  margin-bottom: 0.5em;
 }
 
 h6, .zeta { 
-  font-size: 1em;
-  margin-bottom: 0; 
+  @include font-size(16);
 }
