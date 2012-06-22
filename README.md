@@ -13,8 +13,6 @@ If you're not familiar with Sass, no problem! You can still use this boilerplate
 * Combines CSS best practices, tricks and techniques (such as OOCSS and SMACSS)
 
 
-Structure
-====================
 
 Mixins
 --------------------
@@ -133,6 +131,7 @@ CSS Print
 --------------------
 
 Custom CSS Print based on the one in HTML5 Boilerplate
+
 
 
 
