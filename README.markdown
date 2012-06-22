@@ -59,16 +59,16 @@ a different coloured background or border), the "multi-class" pattern is more
 scalable and allows more flexibility in big projects:
 (About HTML semantics and front-end architecture)
 
-    .btn { button template styles }
-    .btn-primary { styles specific to primary button }
-    &lt;button class="btn"&gt;Default&lt;/button&gt;
-    &lt;button class="btn btn-primary"&gt;Login&lt;/button&gt;
+        .btn { button template styles }
+    	.btn-primary { styles specific to primary button }
+    	&lt;button class="btn"&gt;Default&lt;/button&gt;
+    	&lt;button class="btn btn-primary"&gt;Login&lt;/button&gt;
 
 * A good rule of thumb is that anything within the body of a container is clearly a 
 separate object.<br />The example below is questionable because the UL is clearly a separate 
 object (OOCSS):
 
-    .sidebar ul { ... }
+        .sidebar ul { ... }
 
 * A state is something that augments and overrides all other styles. For example, 
 an accordion section may be in a collapsed or expanded state. A message may be in a
@@ -89,7 +89,7 @@ better idea to name the class of specific button "btn-big-red" instead of "btn".
 selector breakage, a good rule of thumb is to use, when possible, a maximum of 
 3 selectors:
 
-    .module &gt; .box .title
+        .module &gt; .box .title
 
 
 * Every font-size property should be using REM units (root em) now. This way
@@ -99,4 +99,4 @@ to create fully scalable projects. With a fallback to pixels for older browsers
 <br /><br />To use, simply use the predefined mixins "@include font-size(nbPixels);".
 <br />For example:
 
-    h1 { @include font-size(48); }
+        h1 { @include font-size(48); }
