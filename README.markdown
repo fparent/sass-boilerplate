@@ -36,12 +36,12 @@ Best practices and things to remember
 
 * Use classes to name your objects and their components rather than relying solely 
 on the semantics of HTML. By referencing these classes in your stylesheets (say, 
-rather than directly styling the <img> element), your HTML can be flexible. (OOCSS)
+rather than directly styling the &lt;img&gt; element), your HTML can be flexible. (OOCSS)
 
 
 * An object should look the same no matter where you put it. So instead of styling 
-a specific <h2> with .myObject h2 {...}, create and apply a class that describes the 
-<h2> in question, like <h2 class="category">. (OOCSS)
+a specific &lt;h2&gt; with .myObject h2 {...}, create and apply a class that describes the 
+&lt;h2&gt; in question, like &lt;h2 class="category"&gt;. (OOCSS)
 
 
 * Avoid using IDs unless they have a semantic meaning or serve a specific purpose,
@@ -57,13 +57,13 @@ scalable and allows more flexibility in big projects:
 
     .btn { button template styles }
     .btn-primary { styles specific to primary button }
-    <button class="btn">Default</button>
-    <button class="btn btn-primary">Login</button>
+    &lt;button class="btn"&gt;Default&lt;/button&gt;
+    &lt;button class="btn btn-primary"&gt;Login&lt;/button&gt;
 
 
 * A good rule of thumb is that anything within the body of a container is clearly a 
 separate object. (OOCSS)
-#sidebar ul { ... }
+.sidebar ul { ... }
 This is questionable because the UL is clearly a separate object.
 
 
@@ -85,13 +85,13 @@ better idea to name the class of specific button "btn-big-red" instead of "btn".
 * Keep your CSS selectors short! To increase efficiency and reduces chances of 
 selector breakage, a good rule of thumb is to use, when possible, a maximum of 
 3 selectors: 
-    .module > .box .title
+    .module &gt; .box .title
 
 
 * Every font-size property should be using REM units (root em) now. This way
 every sizes will be relative to the base element (html in our projects) and allow
 to create fully scalable projects. With a fallback to pixels for older browsers
-(<IE8), we have a consistent and predictable sizing in all browsers.(snook.ca)
+(&lt;IE8), we have a consistent and predictable sizing in all browsers.(snook.ca)
 
 To use, simply use the predefined mixins "@include font-size(nbPixels);". 
 For example:
