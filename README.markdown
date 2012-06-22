@@ -31,6 +31,10 @@ Structure
 * CSS Print
 
 
+Predefined Mixins and helpers
+====================
+
+
 Best practices and things to remember
 ====================
 
@@ -91,8 +95,6 @@ selector breakage, a good rule of thumb is to use, when possible, a maximum of
 * Every font-size property should be using REM units (root em) now. This way
 every sizes will be relative to the base element (html in our projects) and allow
 to create fully scalable projects. With a fallback to pixels for older browsers
-(&lt;IE8), we have a consistent and predictable sizing in all browsers.(snook.ca)
-
-To use, simply use the predefined mixins "@include font-size(nbPixels);". 
-For example:
+(&lt;IE8), we have a consistent and predictable sizing in all browsers.(snook.ca).
+<br /><br />To use, simply use the predefined mixins "@include font-size(nbPixels);".<br />For example:
     h1 { @include font-size(48); }
