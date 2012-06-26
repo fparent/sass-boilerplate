@@ -69,7 +69,7 @@ Structure (Layouts)
 --------------------
 
 This is the blueprint of your project. It defines your grid design, your layout architecture (as suggested in SMACSS) but also your menus, sidebars, header/footer, wrappers and main container.
-I personally liek to use a structure similar to this:
+I personally like to use a structure similar to this:
 
 <pre>
 ------------------------------------------------
