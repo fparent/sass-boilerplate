@@ -161,8 +161,8 @@ scalable and allows more flexibility in big projects:
 
         .btn { button template styles }
     	.btn-primary { styles specific to primary button }
-    	&lt;button class="btn"&gt;Default&lt;/button&gt;
-    	&lt;button class="btn btn-primary"&gt;Login&lt;/button&gt;
+    	<button class="btn">Default</button>
+    	<button class="btn btn-primary">Login</button>
 
 * A good rule of thumb is that anything within the body of a container is clearly a 
 separate object.<br />The example below is questionable because the UL is clearly a separate 
@@ -189,7 +189,7 @@ better idea to name the class of specific button "btn-big-red" instead of "btn".
 selector breakage, a good rule of thumb is to use, when possible, a maximum of 
 3 selectors:
 
-        .module &gt; .box .title
+        .module > .box .title
 
 
 * Every font-size property should be using REM units (root em) now. This way
