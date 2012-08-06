@@ -37,3 +37,17 @@ h5, .epsilon {
 h6, .zeta { 
   @include font-size(16);
 }
+
+
+// Utilities
+// -----------------------------------------------------------------------------------
+// Used to overwrite font-weight in specific cases
+.lighter  { font-weight: light; }
+.normal   { font-weight: normal; }
+.bold     { font-weight: bold; }
+.bolder   { font-weight: bolder; }
+
+
+.tight {
+  letter-spacing: -2px;
+}
