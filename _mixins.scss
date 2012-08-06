@@ -52,3 +52,81 @@
 		border-#{ $border-radius-position }-radius: $border-radius;
 	}
 }
+
+
+// Set a background-gradient on an element;
+// @params: start position, end position, start color, end color
+@mixin gradient ( $start-pos, $end-pos, $start-color, $end-color ) {
+    $deg-end-pos: null;
+    
+    @if $end-pos == right bottom {
+        $deg-end-pos: 315deg;
+    } @else if $end-pos == left bottom {
+        $deg-end-pos: 225deg;
+    } @else if $end-pos == left top {
+        $deg-end-pos: 135deg;
+    } @else if $end-pos == right top  {
+        $deg-end-pos: 45deg;
+    }
+    
+    background-color: $start-color;
+    background-image: -webkit-gradient(linear, $start-pos, $end-pos, from($start-color), to($end-color)); /* Saf4+, Chrome */
+    
+    @if $deg-end-pos == null {
+        background-image: -webkit-linear-gradient($start-pos, $start-color, $end-color); /* Chrome 10+, Saf5.1+ */
+        background-image: -moz-linear-gradient($start-pos, $start-color, $end-color); /* FF3.6 */
+        background-image: -o-linear-gradient($start-pos, $start-color, $end-color); /* Opera 11.10+ */
+    } @else {
+        background-image: -webkit-linear-gradient($start-pos $deg-end-pos, $start-color, $end-color); /* Chrome 10+, Saf5.1+ */
+        background-image: -moz-linear-gradient($start-pos $deg-end-pos, $start-color, $end-color); /* FF3.6 */
+        background-image: -o-linear-gradient($start-pos $deg-end-pos, $start-color, $end-color); /* Opera 11.10+ */
+    }
+
+    background-image: linear-gradient($start-pos, $start-color, $end-color);
+}
+
+
+@mixin box-shadow($color, $blur, $offset-left: null, $offset-top: null) {
+    
+    @if $offset-left == null { $offset-left: 0px }
+    @if $offset-top == null { $offset-top: 0px }
+    
+  -moz-box-shadow: $offset-left $offset-top $blur $color; /* FF3.5+ */
+  -webkit-box-shadow: $offset-left $offset-top $blur $color; /* Saf3.0+, Chrome */
+  box-shadow: $offset-left $offset-top $blur $color; /* Opera 10.5, IE9, Chrome 10+ */
+}
+
+
+// Set the box-shadow of a container based on the CSS3 specs;
+// @params: offset-left, offset-top, blur, spread, color
+@mixin box-shadow( $offset-left, $offset-top, $blur: null, $spread: null, $color: null ) {
+  -webkit-box-shadow: $offset-left $offset-top $blur $spread $color; /* Saf3.0+, Chrome */
+     -moz-box-shadow: $offset-left $offset-top $blur $spread $color; /* FF3.5+ */
+          box-shadow: $offset-left $offset-top $blur $spread $color; /* Opera 10.5, IE9, Chrome 10+ */
+}
+
+
+// Set the border-radius for either all sides or a specified one
+@mixin add-border-radius( $border-radius-position: all, $border-radius: 2px ) {
+  @if $border-radius-position == 'all' {
+    border-radius: $border-radius;
+  } @else {
+    border-#{ $border-radius-position }-radius: $border-radius;
+  }
+
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+
+  .lt-ie9 & {
+    // To support round corners on older browsers (IE6-IE9), you can use
+    // Modernizr (to detect feature compatibility) and then load 
+    // PIE.htc (http://css3pie.com/)
+    // behavior: url(/static/js/libs/PIE.htc);
+  }
+}
+
+
+// Set the opacity in every browsers, including IE
+@mixin opacity ($opacity) {
+    filter: alpha(opacity=$opacity*100);
+    opacity: $opacity;
+}
