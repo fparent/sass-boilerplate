@@ -19,10 +19,13 @@ Mixins
 
 Predefined general styles. To use, simply use "@include nameOfMixin" in the selector.
 Currently, the following mixins are available:
-* font-size(px) - This should be called everywhere you would use the font-size property. It will convert the pixels value in "REM" for a more flexible approach in modern browsers, but keep the pixels value as fallback for older browsers.
+* font-size (px) - This should be called everywhere you would use the font-size property. It will convert the pixels value in "REM" for a more flexible approach in modern browsers, but keep the pixels value as fallback for older browsers.
 * clearfix - if you want to apply the clearfix code directly in a selector instead of using the .clearfix class
 * inline-block - apply the "inline-block" display mode to a container and fallback for old IEs
-* add-border-radius(position, value) - set the border-radius for either all sides or a specified one
+* border-radius (position, value) - set the border-radius for either all sides or a specified one
+* box-gradient (start position, end position, start color, end color) - set a background-gradient on an element
+* box-shadow (offset-left, offset-top, blur, spread, color) - set the box-shadow of a container based on the CSS3 specs
+* opacity (percent) - set the opacity in every browsers, including IE
 
 
 StarterCSS
