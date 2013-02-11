@@ -3,7 +3,7 @@
 // header, footer, wrapper, layout (split, full, tiers), boxes, container, etc.
 //************************************************************************************
 
-.wrapper { 
+.wrapper {
     width: 960px;
     margin: 0 auto;
     position: relative;
@@ -12,18 +12,39 @@
     @include clearfix;
 }
 
+main {
+
+}
 
 .content {
   position: relative;
+}
+
+.spacer {
+    margin: 2em 0;
 }
 
 
 
 // Layout
 // -----------------------------------------------------------------------------------
-.full 	{ }
-.split 	{ }
-.tiers	{ }
+.full 	{ width: 100%;   }
+.split 	{ width: 50%;    }
+.tiers	{ width: 33.3%;  }
+
+
+// Grid
+// -----------------------------------------------------------------------------------
+.grid-10    { width: 10%;   }
+.grid-20    { width: 20%;   }
+.grid-30    { width: 30%;   }
+.grid-40    { width: 40%;   }
+.grid-50    { width: 50%;   }
+.grid-60    { width: 60%;   }
+.grid-70    { width: 70%;   }
+.grid-80    { width: 80%;   }
+.grid-90    { width: 90%;   }
+.grid-100   { width: 100%;  }
 
 
 // Header
@@ -31,6 +52,10 @@
 
 
 // Menu & Navigation
+// -----------------------------------------------------------------------------------
+
+
+// Sidebar
 // -----------------------------------------------------------------------------------
 
 
