@@ -1,6 +1,6 @@
 /************************************************************************************
 *
-* StarterCSS v2.0
+* StarterCSS v2.1
 * Copyright 2012, Frank Parent
 * https://github.com/fparent/StarterCSS
 * Free to use under the MIT license.
@@ -8,7 +8,7 @@
 *
 * Thanks to Dave Gamache (davegamache.com) for the design inspiration of the form
 * elements. His Skeleton Boilerplate is awesome.
-* 
+*
 * Also props to the Twitter team for their excellent work on the Bootstrap project
 * (http://twitter.github.com/bootstrap/). This is precisely what inspired me to
 * create StarterCSS as I need something similar, but more adapted to my needs.
@@ -18,7 +18,7 @@
 * HTML5Boilerplate for some time and decided to include it since it fixes a lot of
 * cross-browsers inconsistencies and a lot more.
 * http://necolas.github.com/normalize.css/
-* 
+*
 *************************************************************************************/
 
 
@@ -30,10 +30,10 @@
 // http://paulirish.com/2012/box-sizing-border-box-ftw
 // Also using * alone should not be a great performance issue
 // http://css-tricks.com/things-it-might-be-funuseful-to-try-the-universal-selector-on/
-* { 
-  -moz-box-sizing: border-box; 
-  -webkit-box-sizing: border-box; 
-  box-sizing: border-box; 
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 
   //Shortcut to prevent from repeating the property on every item with a background-image
   background-repeat: no-repeat;
@@ -66,7 +66,6 @@ body {
 html, body {
   width: 100%;
   height: 100%;
-  position: relative;
 }
 
 
@@ -79,6 +78,7 @@ figure,
 footer,
 header,
 hgroup,
+main,
 menu,
 nav,
 section {
@@ -101,17 +101,20 @@ textarea {
   font-weight: normal;
   line-height: normal;
   margin: 0;
-  vertical-align: baseline;
-  *vertical-align: middle;
+}
+
+button,
+input {
+    line-height: normal;
 }
 
 
 // Remove text-shadow in selection highlight: h5bp.com/i
 // These selection declarations have to be separate
-::selection { 
-  background: #15e1ff; 
-  color: #fff; 
-  text-shadow: none; 
+::selection {
+  background: #15e1ff;
+  color: #fff;
+  text-shadow: none;
 }
 
 
@@ -120,14 +123,14 @@ textarea {
 // LINKS
 // ***********************************************************************************
 
-a { 
-  text-decoration: underline; 
+a {
+  text-decoration: underline;
   vertical-align: baseline;
 }
 
 
 // Improves readability when focused and also mouse hovered in all browsers
-// people.opera.com/patrickl/experiments/keyboard/test 
+// people.opera.com/patrickl/experiments/keyboard/test
 a:hover, a:active {
   outline: 0;
 }
@@ -149,8 +152,15 @@ table {
   border-spacing: 0;
 }
 
-table th, 
+// Remove padding for the default table cell style
+table th,
 table td {
+  padding: 0;
+  text-align: left;
+}
+
+.cozy th,
+.cozy td {
   padding: .5em;
   text-align: left;
 }
@@ -160,7 +170,7 @@ th {
   vertical-align: middle;
 }
 
-table td, 
+table td,
 table tfoot {
   vertical-align: top;
   border-top: 1px solid #ddd;
@@ -204,8 +214,8 @@ address {
 }
 
 
-details summary::-webkit-details-marker { 
-  display: none; 
+details summary::-webkit-details-marker {
+  display: none;
 }
 
 
@@ -227,20 +237,20 @@ h6 {
   padding: 0;
   margin: 0;
   border: 0;
-  font-weight: bold;
+  font-weight: normal;
   font-style: normal;
   font-family: inherit;
   vertical-align: baseline;
 }
 
 
-h1 a, 
-h2 a, 
-h3 a, 
-h4 a, 
-h5 a, 
-h6 a { 
-  font-weight: inherit; 
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
 }
 
 
@@ -259,7 +269,7 @@ dfn[title] {
 
 // Normalize the default style in case another css reset override them
 // Addresses style set to 'bolder' in FF3+, S4/5, Chrome
-b, 
+b,
 strong,
 .strong {
 	font-weight: bold;
@@ -272,24 +282,17 @@ strong,
 
 
 hr {
-  display: block; 
+  display: block;
   clear: both;
-  height: 1px; 
-  border: 0; 
-  border-top: solid 1px #eee; 
-  margin: 1em 0; 
+  width: 100%;
+  height: 1px;
+  border: 0;
+  margin: 0;
   padding: 0;
 }
 
-
-.separator {
-  padding-bottom: 1em;
-  border-bottom: solid 1px #eee;
-}
-
-
 p, article {
-  margin-bottom: 1.25em;
+  margin-bottom: 1.5em;
   position: relative;
 }
 
@@ -304,7 +307,7 @@ address,
 cite,
 dfn,
 em,
-i, 
+i,
 q,
 var {
 	font-style: italic;
@@ -403,7 +406,7 @@ s {
 // QUOTES & CITATIONS
 // ***********************************************************************************
 
-// Addresses quote property not supported in S4 
+// Addresses quote property not supported in S4
 q:before,
 q:after,
 blockquote:before,
@@ -452,14 +455,12 @@ blockquote small:before {
 // ***********************************************************************************
 // LISTS
 // ***********************************************************************************
-
-.content ul, .content ol {
-  margin: 0 0 1.25em 1.25em;
+ul {
+  list-style: disc outside;
 }
 
-
-.content ul {
-  list-style: disc outside;
+.content ul, .content ol {
+  margin: 0 0 1.5em 1.25em;
 }
 
 
@@ -476,9 +477,9 @@ ul ul, ol ul {
 
 
 // Again, style the third level of lists differently
-ol ol ul, 
-ol ul ul, 
-ul ol ul, 
+ol ol ul,
+ol ul ul,
+ul ol ul,
 ul ul ul {
   list-style-type: square;
 }
@@ -486,7 +487,7 @@ ul ul ul {
 
 // Lists inside navigation usually serve diferent purposed (generally menus); therefor,
 // it's probably a good idea to reset their style
-nav ol, 
+nav ol,
 nav ul,
 nav ul ul,
 nav ol ol {
@@ -499,26 +500,6 @@ nav ol ol {
 
 nav a {
   display: inline-block;
-}
-
-
-dl, dl dt, dl dd {
-  margin-bottom: 1em;
-}
-
-
-dd {
-    margin: 0 0 0 2em;
-}
-
-
-dl dt {
-  font-weight: bold;
-}
-
-
-dl dd {
-  margin-left: 1em;
 }
 
 
