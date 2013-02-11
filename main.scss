@@ -1,27 +1,33 @@
-//* scss-compile-options: --style compressed
+//* scss-compile-options: --debug-info
 
 /************************************************************************************
 * Company Name
 * Company Website
-* 
+*
 * Project Name
 * Date
 * Author
 *************************************************************************************/
 
+// @import "compass";
 
 @import "_mixins";
 @import "_helper";
 @import "starter";
 
-@import "partials/_brand";
 @import "partials/_typography";
+@import "partials/_brand";
 @import "partials/_base";
 @import "partials/_structure";
-@import "partials/_modules";
+@import "partials/_components";
 @import "partials/_pages";
 @import "partials/_forms";
 @import "partials/_plugins";
 
 @import "partials/_media-queries";
 @import "partials/_print";
+
+
+// Modules
+// -----------------------------------------------------------------------------------
+@import "modules/_specificModule";
