@@ -103,9 +103,16 @@ textarea {
   margin: 0;
 }
 
+
+// By default, browsers set `text-transform:none` on most form controls in
+// order to prevent `text-transform` being inherited from ancestor nodes.
+// However, the `button` and `select` elements are exceptions.
+// http://tjvantoll.com/2012/07/10/default-browser-handling-of-the-css-text-transform-property/
 button,
-input {
+input,
+select {
     line-height: normal;
+    text-transform: none;
 }
 
 
@@ -190,8 +197,6 @@ table tbody th {
 // Corrects inline-block display not defined in IE6/7/8/9 & FF3
 audio, canvas, video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 
@@ -363,9 +368,7 @@ pre {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  white-space: pre;
   white-space: pre-wrap;
-  word-wrap: break-word;
 }
 
 

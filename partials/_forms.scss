@@ -75,6 +75,13 @@ input[type="submit"] {
 }
 
 
+// Styles for disabled buttons
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+
 .button,
 button,
 input[type="submit"],
