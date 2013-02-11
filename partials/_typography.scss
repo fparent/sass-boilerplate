@@ -2,6 +2,30 @@
 // TYPOGRAPHY
 //************************************************************************************
 
+// Font Colors
+// -----------------------------------------------------------------------------------
+$title-color:   #000000;
+$text-color:    #000000;
+$text-faint:    #6a6a6a;
+$text-weak:     #999999;
+$text-danger:   #0000ff;
+
+.white  { color: #ffffff; }
+.black  { color: #000000; }
+.faint  { color: $text-faint; }
+.weak   { color: $text-weak; }
+.danger { color: $text-danger; }
+
+
+
+// Font families & Custom Fonts
+// Includes @font-face declarations if any
+// -----------------------------------------------------------------------------------
+.sans-serif   { font-family: sans-serif; }
+.serif        { font-family: serif; }
+.cursive      { font-family: cursive; }
+
+
 
 // Headings
 // -----------------------------------------------------------------------------------
@@ -9,48 +33,90 @@
 // Define a reusable & flexible class for each heading, which can be used everywhere
 // in the page to replicate the style of the headings while keeping a clean structure.
 // http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
-h1, .alpha { 
-  @include font-size(48);
+h1, .alpha {
+  @include font-size( 48 );
   margin-bottom: 1em;
 }
 
-h2, .beta { 
-  @include font-size(36);
+h2, .beta {
+  @include font-size( 36 );
   margin-bottom: 0.75em;
 }
 
-h3, .gamma { 
-  @include font-size(28);
+h3, .gamma {
+  @include font-size( 28 );
   margin-bottom: 0.5em;
 }
 
-h4, .delta { 
-  @include font-size(22);
+h4, .delta {
+  @include font-size( 22 );
   margin-bottom: 0.5em;
 }
 
-h5, .epsilon { 
-  @include font-size(18);
+h5, .epsilon {
+  @include font-size( 18 );
   margin-bottom: 0.5em;
 }
 
-h6, .zeta { 
-  @include font-size(16);
+h6, .zeta {
+  @include font-size( 16 );
 }
+
+
+
+// Font Sizes
+// -----------------------------------------------------------------------------------
+.fs-8   { @include font-size( 8 ); }
+.fs-9   { @include font-size( 9 ); }
+.fs-10  { @include font-size( 10 ); }
+.fs-12  { @include font-size( 12 ); }
+.fs-14  { @include font-size( 14 ); }
+.fs-16  { @include font-size( 16 ); }
+.fs-18  { @include font-size( 18 ); }
+.fs-24  { @include font-size( 24 ); }
+.fs-30  { @include font-size( 30 ); }
+.fs-36  { @include font-size( 36 ); }
+.fs-38  { @include font-size( 38 ); }
+.fs-52  { @include font-size( 52 ); }
+
+
+
+// Alternate Text Styles
+// -----------------------------------------------------------------------------------
+
+// Text style different from the main typography
+.alt-text {
+
+}
+
+// Style used for sub section titles
+.leaders {
+
+}
+
+// Smaller prints or hyperlinks
+.small-text {
+
+}
+
 
 
 // Utilities
 // -----------------------------------------------------------------------------------
+
 // Used to overwrite font-weight in specific cases
 .lighter  { font-weight: light; }
 .normal   { font-weight: normal; }
 .bold     { font-weight: bold; }
 .bolder   { font-weight: bolder; }
 
+.looser   { letter-spacing: 2px; }
+.loose    { letter-spacing: 1px; }
+.tight    { letter-spacing: -2px; }
+.tighter  { letter-spacing: -3px; }
 
-.tight {
-  letter-spacing: -2px;
-}
+.straight { font-style: normal; }
+.italic   { font-style: italic; }
 
 
 // Uppercase and Lowercase text
