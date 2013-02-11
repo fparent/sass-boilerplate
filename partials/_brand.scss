@@ -3,8 +3,8 @@
 // colors, specific typography, logos
 //************************************************************************************
 
-$brand-1: #15e1ff;
-$brand-2: #15e1ff;
+$brand-1: #000000;
+$brand-2: #ffffff;
 $brand-3: #15e1ff;
 
 
@@ -15,7 +15,92 @@ $brand-3: #15e1ff;
 .brand-3 { color: $brand-3; }
 
 
+// Brand backgrounds
+// -----------------------------------------------------------------------------------
+.bg-brand1 { background-color: $brand-1; }
+.bg-brand2 { background-color: $brand-2; }
+.bg-brand3 { background-color: $brand-3; }
+
+
 // Logo
 // -----------------------------------------------------------------------------------
 .logo-main 	{ }
 .logo-alt 	{ }
+
+
+// Buttons
+// -----------------------------------------------------------------------------------
+
+// The default square call-to-action buttons
+//
+// :hover               -
+// :active              -
+//
+// Styleguide 0.0.1.
+.cta-primary {
+
+    &:hover {
+
+    }
+
+    &:active {
+
+    }
+}
+
+
+
+// The secondary call-to-action buttons, lighter than the primary cta
+//
+// :hover               -
+// :active              -
+//
+// Styleguide 0.0.1.
+.cta-secondary {
+
+    &:hover {
+
+    }
+
+    &:active {
+
+    }
+}
+
+
+// The alternate call-to-action buttons with a different color than
+// the primary and secondary one
+//
+// :hover               -
+// :active              -
+//
+// Styleguide 0.0.1.
+.cta-accent {
+
+    &:hover {
+
+    }
+
+    &:active {
+
+    }
+}
+
+
+// Similar to the cta-accent button but used in specific cases only
+// especially to attract the attention, like a "add to cart" button or checkout
+//
+// :hover               -
+// :active              -
+//
+// Styleguide 0.0.1.
+.cta-focus {
+
+    &:hover {
+
+    }
+
+    &:active {
+
+    }
+}
