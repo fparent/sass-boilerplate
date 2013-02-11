@@ -11,4 +11,41 @@ html {
 // Set a default color for the hyperlinks
 a {
 	color: #000;
+
+    &:hover {
+        color: #333;
+    }
+}
+
+
+// Paragraphs
+// -----------------------------------------------------------------------------------
+p, article, dl {
+    @include line-height( 18 );
+}
+
+
+// Separators
+// -----------------------------------------------------------------------------------
+.content hr {
+    border-bottom: solid 1px #ddd;
+}
+
+
+// Table
+// -----------------------------------------------------------------------------------
+// Alternative row background-color
+.zebra tr:nth-child( odd ) {
+    background-color: #fafafa;
+}
+
+// Make the thead row standout from the rest
+thead {
+    tr {
+        background-color: $brand-1;
+    }
+
+    th {
+        color: #fff;
+    }
 }
