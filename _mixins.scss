@@ -40,3 +40,22 @@
   *display: inline;
   *vertical-align: auto;
 }
+
+
+
+@mixin clearfix {
+  zoom: 1;
+  height: 0;
+  content: "\0020";
+  display: block;
+  overflow: hidden;
+
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
