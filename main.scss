@@ -2,14 +2,14 @@
 
 /************************************************************************************
 * Company Name
-* Company Website
+* http://www.companyname.com;
 *
-* Project Name
-* Date
+* Company Name - Project Name
+* 00/00/200
 * Author
 *************************************************************************************/
 
-// @import "compass";
+@import "compass";
 
 @import "_mixins";
 @import "_helper";
@@ -19,7 +19,7 @@
 @import "partials/_brand";
 @import "partials/_base";
 @import "partials/_structure";
-@import "partials/_components";
+@import "partials/_modules";
 @import "partials/_pages";
 @import "partials/_forms";
 @import "partials/_plugins";
@@ -30,4 +30,11 @@
 
 // Modules
 // -----------------------------------------------------------------------------------
-@import "modules/_specificModule";
+@import "modules/_somemodule";
+
+
+
+// Pages
+// -----------------------------------------------------------------------------------
+// home
+.page-home                  { @import "pages/_home"; }

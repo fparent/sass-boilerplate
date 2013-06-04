@@ -14,6 +14,13 @@
   color: transparent;
 }
 
+@mixin hide-text {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
 
 // Hide for both screenreaders and browsers:
 // css-discuss.incutio.com/wiki/Screenreader_Visibility
@@ -57,8 +64,6 @@
  *    `:before` to contain the top-margins of child elements.
  */
 .clearfix {
-    *zoom: 1;
-
     &:before,
     &:after {
       content: " "; /* 1 */
@@ -96,12 +101,12 @@ img.right { margin-left: 1em; }
 
 
 // Generic reusable spacers
-// Generic reusable spacers
 .no-margin {
-  margin-top: 0;
-  margin-right: 0;
-  margin-bottom: 0;
-  margin-left: 0;
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
 }
 
 .space-top      { margin-top: 2.500em; }
@@ -109,19 +114,15 @@ img.right { margin-left: 1em; }
 .space-bottom   { margin-bottom: 2.500em; }
 .space-left     { margin-left: 2.500em; }
 
+.xlspace-bottom   { margin-bottom: 3.750em; }
+
 
 // Sometimes some elements need to be exceptionnaly displayed differently
-.block        { display: block; }
+.block        { display: block !important; }
 .inline-block { display: inline-block; }
 
 
-// Lists
-// -----------------------------------------------------------------------------------
-.bullet {
-  list-style-type: disc;
-  margin-left: 1.4em;
-}
-
+// Custom styles for the lists
 .no-bullet {
   list-style-type: none;
 }
@@ -163,4 +164,15 @@ img.right { margin-left: 1em; }
     display: table-cell;
     vertical-align: middle
   }
+}
+
+.valign-bottom {
+  vertical-align: bottom;
+}
+
+
+// Cursors
+// -----------------------------------------------------------------------------------
+.pointer {
+  cursor: pointer;
 }

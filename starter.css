@@ -1,0 +1,494 @@
+/************************************************************************************
+*
+* StarterCSS v2.0
+* Copyright 2012, Frank Parent
+* https://github.com/fparent/StarterCSS
+* Free to use under the MIT license.
+* http://www.opensource.org/licenses/mit-license.php
+*
+* Thanks to Dave Gamache (davegamache.com) for the design inspiration of the form
+* elements. His Skeleton Boilerplate is awesome.
+*
+* Also props to the Twitter team for their excellent work on the Bootstrap project
+* (http://twitter.github.com/bootstrap/). This is precisely what inspired me to
+* create StarterCSS as I need something similar, but more adapted to my needs.
+*
+* Finally, major thanks to Nicolas Gallagher and Jonathan Neal for their contribution
+* to the Web Development community. I've been using their project (Normalize.css) in
+* HTML5Boilerplate for some time and decided to include it since it fixes a lot of
+* cross-browsers inconsistencies and a lot more.
+* http://necolas.github.com/normalize.css/
+*
+*************************************************************************************/
+/* line 33, starter.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 53, starter.scss */
+html {
+  background-color: white;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* line 64, starter.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 83, starter.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* line 97, starter.scss */
+label,
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 104, starter.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/* line 111, starter.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  cursor: pointer;
+}
+
+/* line 120, starter.scss */
+::selection {
+  background: #add1ff;
+  color: #404040;
+  text-shadow: none;
+}
+
+/* line 132, starter.scss */
+a {
+  text-decoration: underline;
+  vertical-align: baseline;
+}
+
+/* line 146, starter.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 156, starter.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 162, starter.scss */
+.cozy th,
+.cozy td {
+  padding: .5em;
+  text-align: left;
+}
+
+/* line 167, starter.scss */
+th {
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+/* line 172, starter.scss */
+td {
+  vertical-align: top;
+}
+
+/* line 177, starter.scss */
+.td-border td,
+.td-border tfoot {
+  border-top: 1px solid #ddd;
+}
+
+/* line 181, starter.scss */
+table tbody th {
+  border-top: 1px solid #ddd;
+  vertical-align: top;
+}
+
+/* line 193, starter.scss */
+audio, canvas, video {
+  display: inline-block;
+}
+
+/* line 199, starter.scss */
+audio:not([controls]) {
+  display: none;
+}
+
+/* line 205, starter.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 210, starter.scss */
+address {
+  display: block;
+  line-height: 18px;
+  margin-bottom: 18px;
+}
+
+/* line 217, starter.scss */
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+/* line 235, starter.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-weight: normal;
+  font-weight: 300;
+  font-style: normal;
+  font-family: inherit;
+  line-height: normal;
+  vertical-align: baseline;
+}
+
+/* line 254, starter.scss */
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+}
+
+/* line 266, starter.scss */
+abbr[title],
+dfn[title] {
+  border-bottom: dotted 1px;
+  cursor: help;
+}
+
+/* line 276, starter.scss */
+b,
+strong,
+.strong {
+  font-weight: bold;
+}
+
+/* line 281, starter.scss */
+.normal {
+  font-weight: normal;
+}
+
+/* line 286, starter.scss */
+hr {
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 297, starter.scss */
+p, article {
+  margin-bottom: 1.5em;
+  position: relative;
+}
+
+/* line 303, starter.scss */
+article small {
+  font-style: italic;
+}
+
+/* line 315, starter.scss */
+address,
+cite,
+dfn,
+em,
+i,
+q,
+var {
+  font-style: italic;
+}
+
+/* line 320, starter.scss */
+ins {
+  background: #15e1ff;
+  color: #404040;
+  text-decoration: none;
+}
+
+/* line 328, starter.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 339, starter.scss */
+pre,
+code,
+kbd,
+samp {
+  font-family: "Inconsolata", "Monaco", "Consolas", "Courier New", Courier, monospace;
+  font-size: 12px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* line 348, starter.scss */
+code {
+  background-color: #fee9cc;
+  color: #999;
+  color: rgba(0, 0, 0, 0.75);
+  padding: 1px 3px;
+}
+
+/* line 357, starter.scss */
+pre {
+  background-color: #f5f5f5;
+  display: block;
+  padding: 8.5px;
+  margin: 0 0 18px;
+  line-height: 18px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* line 375, starter.scss */
+small {
+  font-size: 10px;
+}
+
+/* line 382, starter.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 390, starter.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 395, starter.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 401, starter.scss */
+del,
+s {
+  text-decoration: line-through;
+}
+
+/* line 415, starter.scss */
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 422, starter.scss */
+blockquote {
+  margin: 1em;
+  border-left: 5px solid #eee;
+  padding-left: 15px;
+}
+
+/* line 429, starter.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 434, starter.scss */
+blockquote p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  margin-bottom: 0;
+}
+
+/* line 442, starter.scss */
+blockquote small {
+  display: block;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 18px;
+  color: #bfbfbf;
+}
+
+/* line 451, starter.scss */
+blockquote small:before {
+  content: '\2014 \00A0';
+}
+
+/* line 460, starter.scss */
+ul {
+  list-style-type: none;
+}
+
+/* line 464, starter.scss */
+.bullet {
+  list-style-type: disc;
+  margin-left: 1.4em;
+}
+
+/* line 469, starter.scss */
+.content ul, .content ol {
+  margin-bottom: 1.25em;
+  margin-left: 1.25em;
+}
+
+/* line 480, starter.scss */
+nav ol,
+nav ul,
+nav ul ul,
+nav ol ol {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 488, starter.scss */
+nav a {
+  display: inline-block;
+}
+
+/* line 499, starter.scss */
+img {
+  border: 0;
+  font-style: italic;
+  -ms-interpolation-mode: bicubic;
+  vertical-align: middle;
+}
+
+/* line 508, starter.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 519, starter.scss */
+figure {
+  margin: 0;
+}
+
+/* line 524, starter.scss */
+figure img {
+  display: block;
+  margin-bottom: 0;
+}
+
+/* line 535, starter.scss */
+fieldset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+/* line 543, starter.scss */
+fieldset > :last-child {
+  margin-bottom: 0;
+}
+
+/* line 550, starter.scss */
+legend {
+  padding: 0;
+}
+
+/* line 555, starter.scss */
+label {
+  cursor: pointer;
+}
+
+/* line 570, starter.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 580, starter.scss */
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* line 589, starter.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 596, starter.scss */
+::-webkit-input-placeholder,
+input:-moz-placeholder {
+  color: #bfbfbf;
+}
+
+/* line 601, starter.scss */
+.button {
+  border: 0;
+  background-image: none;
+  background-color: transparent;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}

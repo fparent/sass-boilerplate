@@ -4,48 +4,84 @@
 //************************************************************************************
 
 html {
-	font: 100% "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font: 300 100% Helvetica, Arial, sans-serif;
+    color: $text-color;
+
+    background-image: url("images/background/noise.png"), -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 750, color-stop(0%, #A7DBD8), color-stop(100%, #69D2E7));
+    background-image: url("images/background/noise.png"), -moz-radial-gradient(top center, circle, #A7DBD8 0%, #69D2E7 750px);
+    background-image: url("images/background/noise.png"), radial-gradient(top center, circle, #A7DBD8 0%, #69D2E7 750px);
+    background-repeat: repeat;
 }
 
 
-// Set a default color for the hyperlinks
+body {
+    @include font-size( 14 );
+    @include line-height( 18 );
+}
+
+
+
+// Hyperlinks
+// -----------------------------------------------------------------------------------
+//
+// Default hyperlinks style
+//
+// default              - The default hyperlink color is black
+// .content a           - Hyperlinks in the content area of the page are pink
+// :hover               - Subtle hover highlight.
+// .dotted              - Generic hyperlinks within the content of the page
+// .arrow-right         - Adds a ">" after the hyperlink
+//
+// Styleguide 0.0.1.
 a {
-	color: #000;
+    color: $brand-4;
+    text-decoration: none;
 
     &:hover {
         color: #333;
     }
+
+    &.dotted {
+        @include inline-block;
+        border-bottom: dotted 1px #000;
+    }
+
+    &.arrow-right:after {
+        content: ">";
+        margin-left: 8px;
+    }
+
+    &.full {
+        display: block;
+    }
 }
+
+
+
+// Content and Numbered Lists
+// -----------------------------------------------------------------------------------
+
+
+
+// Definition lists
+// -----------------------------------------------------------------------------------
+dt, dd {
+
+}
+
+
 
 
 // Paragraphs
 // -----------------------------------------------------------------------------------
 p, article, dl {
-    @include line-height( 18 );
+
 }
+
 
 
 // Separators
 // -----------------------------------------------------------------------------------
-.content hr {
-    border-bottom: solid 1px #ddd;
-}
-
-
-// Table
-// -----------------------------------------------------------------------------------
-// Alternative row background-color
-.zebra tr:nth-child( odd ) {
-    background-color: #fafafa;
-}
-
-// Make the thead row standout from the rest
-thead {
-    tr {
-        background-color: $brand-1;
-    }
-
-    th {
-        color: #fff;
-    }
+.separator {
+    margin-bottom: 60px;
 }

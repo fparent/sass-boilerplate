@@ -1,29 +1,21 @@
 //************************************************************************************
 // TYPOGRAPHY
 //************************************************************************************
-
-// Font Colors
-// -----------------------------------------------------------------------------------
 $title-color:   #000000;
 $text-color:    #000000;
+$text-dim:      #333333;
 $text-faint:    #6a6a6a;
 $text-weak:     #999999;
-$text-danger:   #0000ff;
-
-.white  { color: #ffffff; }
-.black  { color: #000000; }
-.faint  { color: $text-faint; }
-.weak   { color: $text-weak; }
-.danger { color: $text-danger; }
 
 
 
 // Font families & Custom Fonts
-// Includes @font-face declarations if any
 // -----------------------------------------------------------------------------------
-.sans-serif   { font-family: sans-serif; }
-.serif        { font-family: serif; }
-.cursive      { font-family: cursive; }
+.ft-sans        { font-family: sans-serif; }
+.ft-serif       { font-family: serif; }
+
+%ft-sans      { @extend .ft-sans; }
+%ft-serif     { @extend .ft-serif; }
 
 
 
@@ -34,40 +26,72 @@ $text-danger:   #0000ff;
 // in the page to replicate the style of the headings while keeping a clean structure.
 // http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
 h1, .alpha {
-  @include font-size( 48 );
-  margin-bottom: 1em;
+  @include font-size( 46 );
+  @include line-height( 52 );
+  text-transform: uppercase;
 }
+
 
 h2, .beta {
   @include font-size( 36 );
-  margin-bottom: 0.75em;
+  @include line-height( 42 );
 }
+
 
 h3, .gamma {
   @include font-size( 28 );
-  margin-bottom: 0.5em;
+  @include line-height( 32 );
 }
 
+
 h4, .delta {
-  @include font-size( 22 );
-  margin-bottom: 0.5em;
+  @include font-size( 24 );
+  @include line-height( 24 );
+  font-weight: 300;
 }
+
 
 h5, .epsilon {
   @include font-size( 18 );
-  margin-bottom: 0.5em;
 }
 
+
 h6, .zeta {
-  @include font-size( 16 );
+  @include font-size( 14 );
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
+
+
+// Page & Section Titles
+// -----------------------------------------------------------------------------------
+.page-title {
+
+}
+
+
+.page-subtitle {
+
+}
+
+
+.small-title {
+
+}
+
+
+.section-title {
+
+}
+
 
 
 
 // Font Sizes
 // -----------------------------------------------------------------------------------
-.fs-8   { @include font-size( 8 ); }
-.fs-9   { @include font-size( 9 ); }
+.fs-8   { @include font-size( 8 );  }
+.fs-9   { @include font-size( 9 );  }
 .fs-10  { @include font-size( 10 ); }
 .fs-12  { @include font-size( 12 ); }
 .fs-14  { @include font-size( 14 ); }
@@ -76,36 +100,60 @@ h6, .zeta {
 .fs-24  { @include font-size( 24 ); }
 .fs-30  { @include font-size( 30 ); }
 .fs-36  { @include font-size( 36 ); }
-.fs-38  { @include font-size( 38 ); }
 .fs-52  { @include font-size( 52 ); }
 
 
 
-// Alternate Text Styles
+// Line-Heights
 // -----------------------------------------------------------------------------------
+.ln-12 { @include line-height( 12 ); }
+.ln-14 { @include line-height( 14 ); }
+.ln-18 { @include line-height( 18 ); }
+.ln-20 { @include line-height( 20 ); }
+.ln-22 { @include line-height( 22 ); }
+.ln-28 { @include line-height( 28 ); }
 
-// Text style different from the main typography
-.alt-text {
 
-}
 
-// Style used for sub section titles
-.leaders {
-
-}
-
-// Smaller prints or hyperlinks
-.small-text {
-
-}
+// Font Colors
+// -----------------------------------------------------------------------------------
+.white  { color: #ffffff; }
+.black  { color: #000000; }
+.dim    { color: $text-dim; }
+.faint  { color: $text-faint; }
+.weak   { color: $text-weak; }
+.danger { color: red; }
 
 
 
 // Utilities
 // -----------------------------------------------------------------------------------
+.alt-text {
+
+}
+
+
+// Text usually used for sub section titles
+.leaders {
+
+}
+
+
+// Use for tooltips, small buttons, helper, etc.
+.small-link {
+
+}
+
+
+// Add an arrow ">" before the text
+.arrow-before:before {
+    content: ">";
+    margin-right: 8px;
+}
+
 
 // Used to overwrite font-weight in specific cases
-.lighter  { font-weight: light; }
+.lighter  { font-weight: 300; }
 .normal   { font-weight: normal; }
 .bold     { font-weight: bold; }
 .bolder   { font-weight: bolder; }

@@ -3,9 +3,15 @@
 // colors, specific typography, logos
 //************************************************************************************
 
-$brand-1: #000000;
-$brand-2: #ffffff;
-$brand-3: #15e1ff;
+$brand-1: #fa6900; // Orange
+$brand-2: #69d2e7; // Baby Blue
+$brand-3: #ffffff; //
+$brand-4: #ffffff; //
+$brand-5: #ffffff; //
+$brand-6: #ffffff; //
+$brand-7: #ffffff; //
+$brand-8: #ffffff; //
+
 
 
 // Brand colors
@@ -13,28 +19,74 @@ $brand-3: #15e1ff;
 .brand-1 { color: $brand-1; }
 .brand-2 { color: $brand-2; }
 .brand-3 { color: $brand-3; }
+.brand-4 { color: $brand-4; }
+.brand-5 { color: $brand-5; }
+.brand-6 { color: $brand-6; }
+.brand-7 { color: $brand-7; }
+.brand-8 { color: $brand-8; }
+
 
 
 // Brand backgrounds
 // -----------------------------------------------------------------------------------
 .bg-brand1 { background-color: $brand-1; }
 .bg-brand2 { background-color: $brand-2; }
-.bg-brand3 { background-color: $brand-3; }
+
 
 
 // Logo
 // -----------------------------------------------------------------------------------
-.logo-main 	{ }
-.logo-alt 	{ }
+.logo-main {
+
+}
+
+.header-full .logo-main {
+    left: 30px;
+}
+
+.logo-footer {
+    position: absolute;
+    top: 16px;
+    left: 36px;
+}
+
+
+
+// Borders
+// -----------------------------------------------------------------------------------
+@mixin stitches( $side ) {
+    background-image: url(/images/patterns/stitches.gif);
+    background-repeat: repeat-x;
+    background-position: left $side;
+}
+
+.stitches-top {
+    @include stitches( top );
+}
+
+.stitches-bottom {
+    @include stitches( bottom );
+}
+
+.stitches {
+    @include stitches( top );
+}
+
+
+
+// Gradients
+// -----------------------------------------------------------------------------------
+
+
 
 
 // Buttons
 // -----------------------------------------------------------------------------------
 
-// The default square call-to-action buttons
+// The default square call-to-action buttons with dark-gradient
 //
-// :hover               -
-// :active              -
+// :hover               - Invert the gradient effect
+// :active              - Darken the text color
 //
 // Styleguide 0.0.1.
 .cta-primary {
@@ -46,14 +98,19 @@ $brand-3: #15e1ff;
     &:active {
 
     }
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
 }
 
 
 
-// The secondary call-to-action buttons, lighter than the primary cta
+// The secondary call-to-action buttons with light-gradient
 //
-// :hover               -
-// :active              -
+// :hover               - Invert the gradient effect
+// :active              - Lighten the text color
 //
 // Styleguide 0.0.1.
 .cta-secondary {
@@ -65,14 +122,18 @@ $brand-3: #15e1ff;
     &:active {
 
     }
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
 }
 
 
-// The alternate call-to-action buttons with a different color than
-// the primary and secondary one
+// The secondary call-to-action buttons with light-gradient
 //
-// :hover               -
-// :active              -
+// :hover               - Invert the gradient effect
+// :active              - Lighten the text color
 //
 // Styleguide 0.0.1.
 .cta-accent {
@@ -84,14 +145,19 @@ $brand-3: #15e1ff;
     &:active {
 
     }
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
 }
 
 
 // Similar to the cta-accent button but used in specific cases only
-// especially to attract the attention, like a "add to cart" button or checkout
+// especially to attract the attention, like in the checkout pages
 //
-// :hover               -
-// :active              -
+// :hover               - Invert the gradient effect
+// :active              - Lighten the background color
 //
 // Styleguide 0.0.1.
 .cta-focus {
@@ -103,4 +169,48 @@ $brand-3: #15e1ff;
     &:active {
 
     }
+
+  -webkit-transition: all 0.3s ease-out;
+     -moz-transition: all 0.3s ease-out;
+       -o-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
 }
+
+
+
+
+// Table
+// -----------------------------------------------------------------------------------
+// Alternative row background-color
+.zebra tr:nth-child( odd ) {
+    background-color: #fafafa;
+}
+
+// Make the thead row standout from the rest
+thead {
+    tr {
+        background-color: $brand-1 !important;
+    }
+
+    th, a, a:hover {
+        color: #fff;
+    }
+}
+
+
+
+
+// Icons
+// -----------------------------------------------------------------------------------
+
+
+// Badges
+
+
+// Social Icons
+
+
+
+// Opacity
+// -----------------------------------------------------------------------------------
+.alpha-50 { @include opacity ( 0.5 ); }

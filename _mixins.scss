@@ -35,27 +35,41 @@
 // Compatible in IE6+.
 @mixin inline-block {
   display: inline-block;
-  vertical-align: baseline;
-  zoom: 1;
-  *display: inline;
-  *vertical-align: auto;
+  //vertical-align: middle;
+}
+
+
+@mixin border-black( $side ) {
+  border-#{$side}: solid 1px #000;
 }
 
 
 
-@mixin clearfix {
-  zoom: 1;
-  height: 0;
-  content: "\0020";
-  display: block;
-  overflow: hidden;
 
-  &:before, &:after {
-    content: "";
-    display: table;
+@mixin triangle( $direction, $size, $color ) {
+  @if (unitless($size)) {
+    $size: $size * 1px;
   }
 
   &:after {
-    clear: both;
+    width: 0;
+    height: 0;
+    content: "\0020";
+
+    @if $direction == "down" {
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: $size solid $color;
+      bottom: $size * -1;
+    } @else {
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-bottom: $size solid $color;
+      top: $size * -1;
+    }
+
+    margin-left: -5px;
+    position: absolute;
+    left: 50%;
   }
 }

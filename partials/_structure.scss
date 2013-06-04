@@ -1,63 +1,116 @@
-//************************************************************************************
 // STRUCTURE
 // header, footer, wrapper, layout (split, full, tiers), boxes, container, etc.
 //************************************************************************************
-
-.wrapper {
-    width: 960px;
-    margin: 0 auto;
-    position: relative;
-
-    // Self Clearing Goodness
-    @include clearfix;
-}
 
 main {
 
 }
 
+.wrapper {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+
+    @extend .clearfix;
+}
+
+
 .content {
+  min-height: 500px;
   position: relative;
 }
 
+
 .spacer {
-    margin: 2em 0;
+    margin: 32px 0;
 }
 
 
 
 // Layout
 // -----------------------------------------------------------------------------------
-.full 	{ width: 100%;   }
-.split 	{ width: 50%;    }
-.tiers	{ width: 33.3%;  }
+.full 	{
+    width: 100%;
+    height: 100%;
+}
+
+.half {
+    width: 50%;
+}
+
+.tiers	{
+  width: 33.3%;
+}
+
+
+// Center of Interest
+// Container with a defined width, smaller than it's parent container, that
+// is usually alone in the center of the page
+.coi {
+    width: 450px;
+    margin: 0 auto;
+}
+
+
+// Box content with borders all around
+.box {
+    border: solid 1px #ccc;
+}
+
 
 
 // Grid
 // -----------------------------------------------------------------------------------
-.grid-10    { width: 10%;   }
-.grid-20    { width: 20%;   }
-.grid-30    { width: 30%;   }
-.grid-40    { width: 40%;   }
-.grid-50    { width: 50%;   }
-.grid-60    { width: 60%;   }
-.grid-70    { width: 70%;   }
-.grid-80    { width: 80%;   }
-.grid-90    { width: 90%;   }
-.grid-100   { width: 100%;  }
+.grid-10    { width: 10%; }
+.grid-20    { width: 20%; }
+.grid-20    { width: 30%; }
+.grid-40    { width: 40%; }
+.grid-50    { width: 50%; }
+.grid-60    { width: 60%; }
+.grid-70    { width: 70%; }
+.grid-80    { width: 80%; }
+.grid-90    { width: 90%; }
+.grid-100   { width: 100%; }
 
-
-// Header
-// -----------------------------------------------------------------------------------
-
-
-// Menu & Navigation
-// -----------------------------------------------------------------------------------
 
 
 // Sidebar
 // -----------------------------------------------------------------------------------
+.sidebar {
+
+}
+
+
+
+// Header
+// -----------------------------------------------------------------------------------
+.site-header {
+
+}
+
+
+
+// Menu & Navigation
+// -----------------------------------------------------------------------------------
+.breadcrumb {
+
+}
+
+
+.secondary-nav {
+
+}
+
+
+.main-nav {
+
+}
+
 
 
 // Footer
 // -----------------------------------------------------------------------------------
+.site-footer {
+
+}
