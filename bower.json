@@ -1,0 +1,10 @@
+{
+    "name": "sass-boilerplate",
+    "version": "1.0.0",
+    "description": "This is a complete Sass boilerplate to help you start and structure your projects properly. This codebase serves as your CSS starting point and will make development easier, faster and cleaner.",
+    "main": "main.scss",
+    "author": "Frank Parent",
+    "ignore": [
+        "README.md"
+    ]
+}
