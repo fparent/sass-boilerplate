@@ -1,27 +1,23 @@
 //************************************************************************************
 // TYPOGRAPHY
 //************************************************************************************
-$title-color:   #000000;
-$text-color:    #000000;
-$text-dim:      #333333;
-$text-faint:    #6a6a6a;
-$text-weak:     #999999;
 
 
 
 // Font families & Custom Fonts
 // -----------------------------------------------------------------------------------
+.ft-default     { font-family: $default-font; }
+.ft-alt         { font-family: $alt-font; }
 .ft-sans        { font-family: sans-serif; }
 .ft-serif       { font-family: serif; }
 
-%ft-sans      { @extend .ft-sans; }
-%ft-serif     { @extend .ft-serif; }
+%ft-sans        { @extend .ft-sans; }
+%ft-serif       { @extend .ft-serif; }
 
 
 
 // Headings
 // -----------------------------------------------------------------------------------
-
 // Define a reusable & flexible class for each heading, which can be used everywhere
 // in the page to replicate the style of the headings while keeping a clean structure.
 // http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
@@ -64,6 +60,7 @@ h6, .zeta {
 }
 
 
+
 // Page & Section Titles
 // -----------------------------------------------------------------------------------
 .page-title {
@@ -84,7 +81,6 @@ h6, .zeta {
 .section-title {
 
 }
-
 
 
 

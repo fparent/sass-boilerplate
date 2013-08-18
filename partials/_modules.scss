@@ -3,13 +3,13 @@
 //************************************************************************************
 
 
+
 // Tabs
 // -----------------------------------------------------------------------------------
 // Tabs navigation; the clickable links that toggles their associated section
 .tabs {
 
 }
-
 
 
 
@@ -20,6 +20,7 @@
 details {
     margin-bottom: 1em;
 }
+
 
 summary {
     display:block;
@@ -58,45 +59,39 @@ summary {
 // Tooltip
 // -----------------------------------------------------------------------------------
 .tooltip {
-    /* GENERAL */
-    text-shadow: 1px 1px 1px #FFF;
-    line-height:18px;
-
-    /* BORDER */
-    border:1px solid #d0d0d0;
-    border-bottom:1px solid #b5b5b5;
-
-
-    /* BACKGROUND */
     background: #EFEFEF;
     background: -moz-linear-gradient(top, #FFF, #FFF 50%, #EFEFEF);
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFF), color-stop(.5, #FFF), to(#EFEFEF));
-}
+    text-shadow: 1px 1px 1px #FFF;
+    line-height:18px;
+    border:1px solid #d0d0d0;
+    border-bottom:1px solid #b5b5b5;
 
-.tooltip:before {
-    /* TRIANGLE ARROW - BIG */
-    content:"\00a0";
-    display:block;
-    position:absolute;
-    bottom:-28px;
-    left:46px;
-    width:0;
-    height:0;
-    border:14px solid transparent;
-    border-top-color:#b5b5b5;
-}
+    // Triangle arrow - big
+    &:before {
+        width:0;
+        height:0;
+        content: "\00a0";
+        display: block;
+        border: 14px solid transparent;
+        border-top-color: #b5b5b5;
+        position: absolute;
+        bottom: -28px;
+        left: 46px;
+    }
 
-.tooltip:after {
-    /* TRIANGLE ARROW - SMALL */
-    content:"\00a0";
-    display:block;
-    position:absolute;
-    bottom:-26px;
-    left:47px;
-    width:0;
-    height:0;
-    border:13px solid transparent;
-    border-top-color:#EFEFEF;
+    // Triangl arrow - small
+    &:after {
+        width: 0;
+        height: 0;
+        content: "\00a0";
+        display: block;
+        border: 13px solid transparent;
+        border-top-color: #EFEFEF;
+        position: absolute;
+        bottom: -26px;
+        left: 47px;
+    }
 }
 
 
@@ -109,6 +104,7 @@ summary {
     color: #fff;
     font-style: italic;
 }
+
 
 .overlay-white {
     background-color: #fff;
@@ -132,6 +128,7 @@ summary {
 }
 
 
+
 // Dropdown Lists
 // -----------------------------------------------------------------------------------
 .dd-list-wrapper {
@@ -140,9 +137,11 @@ summary {
     z-index: 99;
 }
 
+
 .dd-toggle {
     height: 18px;
 }
+
 
 .dd-list {
     display: none;
@@ -153,8 +152,8 @@ summary {
     top: 36px;
     left: 0;
     @include triangle( up, 9, #cfd0d2 );
-
 }
+
 
 .dd-list-link {
     display: block;
@@ -168,32 +167,31 @@ summary {
 // is loaded.
 // -----------------------------------------------------------------------------------
 [data-js="slideshow"] {
-    background-image: url(/images/loading.gif);
-    background-position: 50% 50%;
+    // background-image: url(/images/loading.gif);
+    // background-position: 50% 50%;
 
     & > * {
         display: none;
     }
 }
 
+
 // Navigation arrows
 .carousel-nav {
 
 }
 
-.arrow-prev, .arrow-next {
 
-    // Hide text
-    border: 0;
-    font: 0/0 a;
-    text-shadow: none;
-    color: transparent;
+.arrow-prev, .arrow-next {
+    @include hide-text;
 }
+
 
 .arrow-prev {
     float: left;
     background-position: 0 0;
 }
+
 
 .arrow-next {
     float: right;

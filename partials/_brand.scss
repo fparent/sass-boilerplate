@@ -3,15 +3,6 @@
 // colors, specific typography, logos
 //************************************************************************************
 
-$brand-1: #fa6900; // Orange
-$brand-2: #69d2e7; // Baby Blue
-$brand-3: #ffffff; //
-$brand-4: #ffffff; //
-$brand-5: #ffffff; //
-$brand-6: #ffffff; //
-$brand-7: #ffffff; //
-$brand-8: #ffffff; //
-
 
 
 // Brand colors
@@ -40,37 +31,15 @@ $brand-8: #ffffff; //
 
 }
 
-.header-full .logo-main {
-    left: 30px;
-}
 
-.logo-footer {
-    position: absolute;
-    top: 16px;
-    left: 36px;
+.logo-alt {
+
 }
 
 
 
 // Borders
 // -----------------------------------------------------------------------------------
-@mixin stitches( $side ) {
-    background-image: url(/images/patterns/stitches.gif);
-    background-repeat: repeat-x;
-    background-position: left $side;
-}
-
-.stitches-top {
-    @include stitches( top );
-}
-
-.stitches-bottom {
-    @include stitches( bottom );
-}
-
-.stitches {
-    @include stitches( top );
-}
 
 
 
@@ -79,10 +48,8 @@ $brand-8: #ffffff; //
 
 
 
-
 // Buttons
 // -----------------------------------------------------------------------------------
-
 // The default square call-to-action buttons with dark-gradient
 //
 // :hover               - Invert the gradient effect
@@ -99,12 +66,10 @@ $brand-8: #ffffff; //
 
     }
 
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+    @include transition-property( all );
+    @include transition-duration( 0.3s );
+    @include transition-timing-function( ease-out );
 }
-
 
 
 // The secondary call-to-action buttons with light-gradient
@@ -123,10 +88,9 @@ $brand-8: #ffffff; //
 
     }
 
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+    @include transition-property( all );
+    @include transition-duration( 0.3s );
+    @include transition-timing-function( ease-out );
 }
 
 
@@ -146,10 +110,9 @@ $brand-8: #ffffff; //
 
     }
 
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+    @include transition-property( all );
+    @include transition-duration( 0.3s );
+    @include transition-timing-function( ease-out );
 }
 
 
@@ -170,12 +133,10 @@ $brand-8: #ffffff; //
 
     }
 
-  -webkit-transition: all 0.3s ease-out;
-     -moz-transition: all 0.3s ease-out;
-       -o-transition: all 0.3s ease-out;
-          transition: all 0.3s ease-out;
+    @include transition-property( all );
+    @include transition-duration( 0.3s );
+    @include transition-timing-function( ease-out );
 }
-
 
 
 
@@ -185,6 +146,7 @@ $brand-8: #ffffff; //
 .zebra tr:nth-child( odd ) {
     background-color: #fafafa;
 }
+
 
 // Make the thead row standout from the rest
 thead {
@@ -196,7 +158,6 @@ thead {
         color: #fff;
     }
 }
-
 
 
 

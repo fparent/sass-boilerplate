@@ -596,16 +596,3 @@ input::-moz-focus-inner {
 input:-moz-placeholder {
   color: #bfbfbf;
 }
-
-// Default button style
-.button {
-  border: 0;
-  background-image: none;
-  background-color: transparent;
-  display: inline-block;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}

@@ -3,49 +3,50 @@
 //************************************************************************************
 
 
-// Mixins
-// -----------------------------------------------------------------------------------
 
 // Use REM in modern browsers and fallback to pixels for IE8-
 // http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
 //
 // $sizeValue - The desired font-size in pixels.
-//
-// Compatible in IE6+.
+// -----------------------------------------------------------------------------------
 @mixin font-size( $sizeValue: 1.6 ) {
   font-size: ($sizeValue * 1) + px;
   font-size: ($sizeValue / 10 * 0.625) + rem;
 }
 
 
+
 // Use REM in modern browsers and fallback to pixels for IE8-
 // http://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
 //
 // $sizeValue - The desired font-size in pixels.
-//
-// Compatible in IE6+.
+// -----------------------------------------------------------------------------------
 @mixin line-height( $sizeValue: 1.6 ) {
   line-height: ($sizeValue * 1) + px;
   line-height: ($sizeValue / 10 * 0.625) + rem;
 }
 
 
+
 // Legacy support for inline-block in IE6-IE7
-//
-// Compatible in IE6+.
+// -----------------------------------------------------------------------------------
 @mixin inline-block {
   display: inline-block;
   //vertical-align: middle;
 }
 
 
+
+// Specific border for a container
+// -----------------------------------------------------------------------------------
 @mixin border-black( $side ) {
   border-#{$side}: solid 1px #000;
 }
 
 
 
-
+// Create a CSS triangle without images using only pseudo-selector
+// -----------------------------------------------------------------------------------
 @mixin triangle( $direction, $size, $color ) {
   @if (unitless($size)) {
     $size: $size * 1px;

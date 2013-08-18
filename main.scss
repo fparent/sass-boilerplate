@@ -1,40 +1,60 @@
-//* scss-compile-options: --debug-info
-
-/************************************************************************************
+/*******************************************************************************
 * Company Name
 * http://www.companyname.com;
 *
 * Company Name - Project Name
 * 00/00/200
 * Author
-*************************************************************************************/
+*******************************************************************************/
+
 
 @import "compass";
 
-@import "_mixins";
-@import "_helper";
 @import "starter";
+@import "core/_variables";
+@import "core/_mixins";
+@import "core/_helper";
 
-@import "partials/_typography";
-@import "partials/_brand";
 @import "partials/_base";
+@import "partials/_brand";
+@import "partials/_typography";
 @import "partials/_structure";
 @import "partials/_modules";
 @import "partials/_pages";
 @import "partials/_forms";
-@import "partials/_plugins";
 
-@import "partials/_media-queries";
-@import "partials/_print";
+
+// Regions
+// -----------------------------------------------------------------------------
+@import "regions/_header";
+@import "regions/_footer";
+@import "regions/_navigation";
+@import "regions/_sidebar";
 
 
 // Modules
-// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 @import "modules/_somemodule";
 
 
-
 // Pages
-// -----------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
 // home
-.page-home                  { @import "pages/_home"; }
+.page-home		{ @import "pages/_home"; }
+
+
+// Vendors & Plugins
+// -----------------------------------------------------------------------------
+//@import "vendors/_vendorCSS";
+@import "partials/_plugins";
+
+
+// Medias
+// -----------------------------------------------------------------------------
+@import "medias/_media-queries";
+@import "medias/_print";
+
+
+// Shame
+// -----------------------------------------------------------------------------
+@import "partials/_shame";

@@ -3,16 +3,19 @@
 //************************************************************************************
 
 
+
 // Cleaner approach to the popular method "text-indent: -9999px" for hidding text when
 // using a background image.
 // Prevent the browser form "painting" a huge container and increase perf on iPad 1
 // http://nicolasgallagher.com/another-css-image-replacement-technique
+// -----------------------------------------------------------------------------------
 .hide-text, .ir {
   border: 0;
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
 }
+
 
 @mixin hide-text {
   border: 0;
@@ -22,8 +25,10 @@
 }
 
 
+
 // Hide for both screenreaders and browsers:
 // css-discuss.incutio.com/wiki/Screenreader_Visibility
+// -----------------------------------------------------------------------------------
 .hidden, .hide {
 	display: none;
 }
@@ -39,10 +44,12 @@
 }
 
 
+
 // Using the Clip Method, hide visually but NOT from screenreaders.
 // This is a best practice for accessibility. For more information:
 // http://css-tricks.com/places-its-tempting-to-use-display-none-but-dont/
 // Clip Method: http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+// -----------------------------------------------------------------------------------
 .visuallyhidden {
   position: absolute !important;
   height: 1px; width: 1px;
@@ -52,17 +59,17 @@
 }
 
 
-/*
- * Clearfix: contain floats
- *
- * For modern browsers
- * 1. The space content is one way to avoid an Opera bug when the
- *    `contenteditable` attribute is included anywhere else in the document.
- *    Otherwise it causes space to appear at the top and bottom of elements
- *    that receive the `clearfix` class.
- * 2. The use of `table` rather than `block` is only necessary if using
- *    `:before` to contain the top-margins of child elements.
- */
+
+
+// Clearfix: contain floats
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+// `contenteditable` attribute is included anywhere else in the document.
+// Otherwise it causes space to appear at the top and bottom of elements
+// that receive the `clearfix` class.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+// -----------------------------------------------------------------------------------
 .clearfix {
     &:before,
     &:after {
@@ -76,20 +83,26 @@
 }
 
 
+
 // You can use a class="clear" to clear floating elements
+// -----------------------------------------------------------------------------------
 .clear, .clearer {
   clear: both;
   display: block;
 }
 
 
+
 // Reusable text alignment class
+// -----------------------------------------------------------------------------------
 .align-left    { text-align: left; }
 .align-center  { text-align: center; }
 .align-right   { text-align: right; }
 
 
+
 // Float element to the left or right
+// -----------------------------------------------------------------------------------
 .right  { float: right; }
 .left   { float: left;}
 .center { margin-left: auto; margin-right: auto; }
@@ -100,7 +113,9 @@ img.left  { margin-right: 1em; }
 img.right { margin-left: 1em; }
 
 
+
 // Generic reusable spacers
+// -----------------------------------------------------------------------------------
 .no-margin {
   margin: 0;
 }
@@ -117,15 +132,20 @@ img.right { margin-left: 1em; }
 .xlspace-bottom   { margin-bottom: 3.750em; }
 
 
+
 // Sometimes some elements need to be exceptionnaly displayed differently
-.block        { display: block !important; }
+// -----------------------------------------------------------------------------------
+.block        { display: block; }
 .inline-block { display: inline-block; }
 
 
+
 // Custom styles for the lists
+// -----------------------------------------------------------------------------------
 .no-bullet {
   list-style-type: none;
 }
+
 
 
 // Positions
@@ -137,26 +157,34 @@ img.right { margin-left: 1em; }
     position: absolute;
 }
 
+
 .top-left {
     top: 0;
     left: 0;
 }
+
 
 .top-right {
     top: 0;
     right: 0;
 }
 
+
 .bottom-left {
     bottom: 0;
     left: 0;
 }
+
 
 .bottom-right {
     bottom: 0;
     right: 0;
 }
 
+
+
+// Alignment
+// -----------------------------------------------------------------------------------
 .v-align {
   display: table;
 
@@ -169,6 +197,7 @@ img.right { margin-left: 1em; }
 .valign-bottom {
   vertical-align: bottom;
 }
+
 
 
 // Cursors

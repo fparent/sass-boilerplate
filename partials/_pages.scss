@@ -1,4 +1,7 @@
 //************************************************************************************
 // PAGES
 // Common styles shared by multiple pages
+// Unless you're working on very large site or application, most of the page-specific
+// code should go in here. Placing it in separate files can create overqualified 
+// problems for your rules, so watch out.
 //************************************************************************************

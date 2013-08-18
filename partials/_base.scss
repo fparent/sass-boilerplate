@@ -3,14 +3,13 @@
 // html, body & default styles
 //************************************************************************************
 
-html {
-    font: 300 100% Helvetica, Arial, sans-serif;
-    color: $text-color;
 
-    background-image: url("images/background/noise.png"), -webkit-gradient(radial, 50% 0%, 0, 50% 0%, 750, color-stop(0%, #A7DBD8), color-stop(100%, #69D2E7));
-    background-image: url("images/background/noise.png"), -moz-radial-gradient(top center, circle, #A7DBD8 0%, #69D2E7 750px);
-    background-image: url("images/background/noise.png"), radial-gradient(top center, circle, #A7DBD8 0%, #69D2E7 750px);
-    background-repeat: repeat;
+
+html {
+    font-family: $default-font;
+    font-size: 100%;
+    font-weight: 300;
+    color: $text-color;
 }
 
 
@@ -39,16 +38,6 @@ a {
 
     &:hover {
         color: #333;
-    }
-
-    &.dotted {
-        @include inline-block;
-        border-bottom: dotted 1px #000;
-    }
-
-    &.arrow-right:after {
-        content: ">";
-        margin-left: 8px;
     }
 
     &.full {
