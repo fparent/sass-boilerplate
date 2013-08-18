@@ -274,7 +274,7 @@ dfn[title] {
 b,
 strong,
 .strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 
@@ -294,8 +294,8 @@ hr {
 }
 
 
-p, article {
-  margin-bottom: 1.5em;
+p, article, ul, ol {
+  margin-bottom: 0;
   position: relative;
 }
 
@@ -313,7 +313,7 @@ em,
 i,
 q,
 var {
-	font-style: italic;
+  font-style: italic;
 }
 
 
@@ -464,11 +464,6 @@ ul {
 .bullet {
   list-style-type: disc;
   margin-left: 1.4em;
-}
-
-.content ul, .content ol {
-  margin-bottom: 1.25em;
-  margin-left: 1.25em;
 }
 
 

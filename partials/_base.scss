@@ -63,8 +63,12 @@ dt, dd {
 
 // Paragraphs
 // -----------------------------------------------------------------------------------
-p, article, dl {
-
+p, 
+article, 
+dl,
+ul,
+ol {
+    margin-bottom: $paragraph-spacing;
 }
 
 
