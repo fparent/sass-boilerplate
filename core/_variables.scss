@@ -5,6 +5,22 @@
 
 
 
+// Site & Sidebar width
+// -----------------------------------------------------------------------------------
+$site-width: 960px;
+$columns: 12;
+$col-margin: 11px;
+
+$sidebar-width: 260px;
+$gutter: 11px;
+
+
+// Grid Layout
+// -----------------------------------------------------------------------------------
+$col-width: ($site-width - ($col-margin * ($columns - 1))) / $columns;
+$col-total-width: $col-width + $col-margin;
+
+
 // Brand color for the project
 // -----------------------------------------------------------------------------------
 $brand-1: #000000; // Black
@@ -21,7 +37,7 @@ $brand-8: #ffffff; // White
 // Font Families
 // -----------------------------------------------------------------------------------
 $default-font: 	Helvetica, Arial, sans-serif;
-$alt-font:		Tahoma, Arial, sans-serif; 
+$alt-font:		Tahoma, Arial, sans-serif;
 
 
 
@@ -35,6 +51,6 @@ $text-weak:     #999999;
 
 
 
-// Paragraph and lists spacing 
+// Paragraph and lists spacing
 // -----------------------------------------------------------------------------------
 $paragraph-spacing: 1.5em;
