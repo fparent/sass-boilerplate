@@ -74,3 +74,12 @@
     left: 50%;
   }
 }
+
+
+// Vertically align the content of a container
+// -----------------------------------------------------------------------------------
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
