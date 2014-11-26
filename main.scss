@@ -9,8 +9,8 @@
 
 
 @import "compass";
-
 @import "starter";
+
 @import "core/_variables";
 @import "core/_mixins";
 @import "core/_helper";
@@ -40,7 +40,7 @@
 // Pages
 // -----------------------------------------------------------------------------
 // home
-.page-home		{ @import "pages/_home"; }
+#page-home		{ @import "pages/_home"; }
 
 
 // Vendors & Plugins
