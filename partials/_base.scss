@@ -8,7 +8,6 @@
 html {
     font-family: $default-font;
     font-size: 100%;
-    font-weight: 300;
     color: $text-color;
 }
 
@@ -63,8 +62,8 @@ dt, dd {
 
 // Paragraphs
 // -----------------------------------------------------------------------------------
-p, 
-article, 
+p,
+article,
 dl,
 ul,
 ol {
