@@ -183,23 +183,6 @@ img.right { margin-left: 1em; }
 
 
 
-// Alignment
-// -----------------------------------------------------------------------------------
-.v-align {
-  display: table;
-
-  & > * {
-    display: table-cell;
-    vertical-align: middle
-  }
-}
-
-.valign-bottom {
-  vertical-align: bottom;
-}
-
-
-
 // Cursors
 // -----------------------------------------------------------------------------------
 .pointer {
