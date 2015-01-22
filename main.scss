@@ -9,7 +9,10 @@
 
 
 @import "compass";
-@import "starter";
+@import "susy";
+
+// OPTIONAL: remove this if you prefer to use normalize.css or your own reset/normalize
+@import "_starter";
 
 @import "core/_variables";
 @import "core/_mixins";
@@ -45,7 +48,6 @@
 
 // Vendors & Plugins
 // -----------------------------------------------------------------------------
-//@import "vendors/_vendorCSS";
 @import "partials/_plugins";
 
 

@@ -8,17 +8,6 @@
 // Site & Sidebar width
 // -----------------------------------------------------------------------------------
 $site-width: 960px;
-$columns: 12;
-$col-margin: 11px;
-
-$sidebar-width: 260px;
-$gutter: 11px;
-
-
-// Grid Layout
-// -----------------------------------------------------------------------------------
-$col-width: ($site-width - ($col-margin * ($columns - 1))) / $columns;
-$col-total-width: $col-width + $col-margin;
 
 
 // Brand color for the project
