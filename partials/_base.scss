@@ -3,18 +3,31 @@
 // html, body & default styles
 //************************************************************************************
 
-
-
 html {
     font-family: $default-font;
     font-size: 100%;
+    font-weight: 400;
     color: $text-color;
 }
 
 
 body {
+    height: 100%;
+    @include flex;
+
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    -ms-flex-wrap: initial;
+      flex-wrap: initial;
+
     @include font-size( 14 );
-    @include line-height( 18 );
+    @include line-height( 23 );
+    overflow-x: hidden;
+
+    &.mobile-nav-opened { overflow: hidden; }
 }
 
 
@@ -32,6 +45,7 @@ body {
 //
 // Styleguide 0.0.1.
 a {
+    color: #000;
     text-decoration: none;
 
     &:hover {
@@ -45,9 +59,13 @@ a {
 
 
 
-// Content and Numbered Lists
+// Images
 // -----------------------------------------------------------------------------------
-
+// Make sure the images don't overflow on mobile
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 
 // Definition lists
@@ -61,11 +79,11 @@ dt, dd {
 
 // Paragraphs
 // -----------------------------------------------------------------------------------
-p,
-article,
-dl,
-ul,
-ol {
+.main p,
+.main article,
+.main dl,
+.main ul,
+.main ol {
     margin-bottom: $paragraph-spacing;
 }
 

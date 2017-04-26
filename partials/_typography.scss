@@ -7,7 +7,6 @@
 // Font families & Custom Fonts
 // -----------------------------------------------------------------------------------
 .ft-default     { font-family: $default-font; }
-.ft-alt         { font-family: $alt-font; }
 .ft-sans        { font-family: sans-serif; }
 .ft-serif       { font-family: serif; }
 
@@ -22,9 +21,7 @@
 // in the page to replicate the style of the headings while keeping a clean structure.
 // http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
 h1, .alpha {
-  @include font-size( 46 );
-  @include line-height( 52 );
-  text-transform: uppercase;
+
 }
 
 
@@ -73,10 +70,19 @@ h6, .zeta {
 }
 
 
-.small-title {
+.subtitle {
 
 }
 
+
+.big-title {
+
+}
+
+
+.small-title {
+
+}
 
 .section-title {
 
@@ -153,11 +159,6 @@ h6, .zeta {
 .normal   { font-weight: normal; }
 .bold     { font-weight: bold; }
 .bolder   { font-weight: bolder; }
-
-.looser   { letter-spacing: 2px; }
-.loose    { letter-spacing: 1px; }
-.tight    { letter-spacing: -2px; }
-.tighter  { letter-spacing: -3px; }
 
 .straight { font-style: normal; }
 .italic   { font-style: italic; }

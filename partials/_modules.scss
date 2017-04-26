@@ -1,160 +1,67 @@
-//************************************************************************************
+//******************************************************************************
 // MODULES
-//************************************************************************************
+//******************************************************************************
 
 
-
-// Tabs
-// -----------------------------------------------------------------------------------
-// Tabs navigation; the clickable links that toggles their associated section
-.tabs {
-
-}
-
-
-
-// HTML5 Native Accordion
-// Use details & summary to create an interactive widget that shows and hides
-// some content. JavaScript fallback for older browsers.
-// -----------------------------------------------------------------------------------
-details {
-    margin-bottom: 1em;
-}
-
-
-summary {
-    display:block;
-    cursor: pointer;
-    font-weight: bold;
-    outline: 0;
-    margin-bottom: 0.5em;
-
-    &:before {
-        content: "[+] ";
-    }
-
-    details[open] &:before,
-    .open &:before {
-        content: "[–] ";
-    }
-}
-
-
-
-// Toolbar containing command buttons
-// Used to show editing buttons in content-restricted area
-// -----------------------------------------------------------------------------------
-.toolbar {
-    padding: 1em;
-    border: dashed 1px #ddd;
-    background-color: #fafafa;
-
-    .button {
-        margin-left: 10px;
-    }
-}
-
-
-
-// Tooltip
-// -----------------------------------------------------------------------------------
-.tooltip {
-    background: #EFEFEF;
-    background: -moz-linear-gradient(top, #FFF, #FFF 50%, #EFEFEF);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #FFF), color-stop(.5, #FFF), to(#EFEFEF));
-    text-shadow: 1px 1px 1px #FFF;
-    line-height:18px;
-    border:1px solid #d0d0d0;
-    border-bottom:1px solid #b5b5b5;
-
-    // Triangle arrow - big
-    &:before {
-        width:0;
-        height:0;
-        content: "\00a0";
-        display: block;
-        border: 14px solid transparent;
-        border-top-color: #b5b5b5;
-        position: absolute;
-        bottom: -28px;
-        left: 46px;
-    }
-
-    // Triangl arrow - small
-    &:after {
-        width: 0;
-        height: 0;
-        content: "\00a0";
-        display: block;
-        border: 13px solid transparent;
-        border-top-color: #EFEFEF;
-        position: absolute;
-        bottom: -26px;
-        left: 47px;
-    }
-}
-
-
-
-// Semi-transarent overlay
-// -----------------------------------------------------------------------------------
-.overlay-black {
-    background-color: #000;
-    background-color: rgba( 0, 0, 0, 0.6 );
-    color: #fff;
-    font-style: italic;
-}
-
-
-.overlay-white {
-    background-color: #fff;
-    background-color: rgba( 255, 255, 255, 0.9 );
-    color: #000;
-    font-style: italic;
-}
-
-
-
-// Loading Container
-// -----------------------------------------------------------------------------------
-.loading-wrapper {
-    display: none;
-    background-color: #fff;
-    text-align: center;
+// SEARCH BAR
+// -----------------------------------------------------------------------------
+.search-form {
+    width: 100%;
+    height: 100px;
+    font-size: 20px;
     position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 99;
-}
+    z-index: 100;
 
+    ::-webkit-input-placeholder {
+      color: #fff;
+    }
+    ::-moz-placeholder {
+      color: #fff;
+    }
+    :-ms-input-placeholder {
+      color: #fff;
+    }
+    :-moz-placeholder {
+      color: #fff;
+    }
 
+    -webkit-transform: translateY(-100px);
+    -moz-transform: translateY(-100px);
+    -ms-transform: translateY(-100px);
+    -o-transform: translateY(-100px);
+    transform: translateY(-100px);
 
-// Dropdown Lists
-// -----------------------------------------------------------------------------------
-.dd-list-wrapper {
-    @include inline-block;
-    position: relative;
-    z-index: 99;
-}
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
 
+    .search-field {
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        color: #fff;
+        padding: 0 80px 0 30px;
+        border: 0;
+        outline: 0;
+    }
 
-.dd-toggle {
-    height: 18px;
-}
+    .search-submit {
+        width: 80px;
+        height: 80px;
+        background: none;
+        color: #fff;
+        line-height: 80px;
+        text-align: center;
+        border: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
 
-
-.dd-list {
-    display: none;
-    background-color: #fff;
-    @include box-shadow( rgba( 108, 108, 108, 0.33 ) 0 0 18px );
-    padding: 8px;
-    position: absolute;
-    top: 36px;
-    left: 0;
-    @include triangle( up, 9, #cfd0d2 );
-}
-
-
-.dd-list-link {
-    display: block;
+    .search-visible & {
+        transform: translateY(0);
+    }
 }

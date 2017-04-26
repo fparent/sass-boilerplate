@@ -9,22 +9,29 @@
 
 
 @import "compass";
-@import "susy";
-
-// OPTIONAL: remove this if you prefer to use normalize.css or your own reset/normalize
-@import "_starter";
 
 @import "core/_variables";
-@import "core/_mixins";
 @import "core/_helper";
 
+
+// Vendors & Plugins
+// -----------------------------------------------------------------------------
+
+
+
+// Project Partials
+// -----------------------------------------------------------------------------
 @import "partials/_base";
 @import "partials/_brand";
 @import "partials/_typography";
 @import "partials/_structure";
-@import "partials/_modules";
-@import "partials/_pages";
 @import "partials/_forms";
+
+
+// Modules
+// -----------------------------------------------------------------------------
+@import "partials/_modules";
+
 
 
 // Regions
@@ -35,20 +42,15 @@
 @import "regions/_sidebar";
 
 
-// Modules
-// -----------------------------------------------------------------------------
-@import "modules/_somemodule";
-
-
 // Pages
 // -----------------------------------------------------------------------------
-// home
-#page-home		{ @import "pages/_home"; }
+@import "partials/_pages";
 
 
-// Vendors & Plugins
+
+// Wordpress Modules
 // -----------------------------------------------------------------------------
-@import "partials/_plugins";
+@import "wordpress/_articles";
 
 
 // Medias

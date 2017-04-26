@@ -65,10 +65,6 @@
     &:active {
 
     }
-
-    @include transition-property( all );
-    @include transition-duration( 0.3s );
-    @include transition-timing-function( ease-out );
 }
 
 

@@ -26,16 +26,46 @@
 
 
 
+// Flexbox styles
+// -----------------------------------------------------------------------------
+@mixin flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+     -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+     -ms-flex-direction: row;
+         flex-direction: row;
+
+ -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+  justify-content: space-between;
+
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    display: block;
+  }
+}
+
+.flex {
+  @include flex;
+}
+
+
+
 // Hide for both screenreaders and browsers:
 // css-discuss.incutio.com/wiki/Screenreader_Visibility
 // -----------------------------------------------------------------------------------
 .hidden, .hide {
-	display: none;
+  display: none;
 }
 
 
 .visible, .show {
-	display: block;
+  display: block;
 }
 
 
@@ -71,14 +101,18 @@
 //    `:before` to contain the top-margins of child elements.
 // -----------------------------------------------------------------------------------
 .clearfix {
-    &:before,
     &:after {
-      content: " "; /* 1 */
-      display: table; /* 2 */
+        content:"";
+        display:block;
+        clear:both;
     }
+}
 
+@mixin clearfix {
     &:after {
-      clear: both;
+        content:"";
+        display:block;
+        clear:both;
     }
 }
 
@@ -179,6 +213,30 @@ img.right { margin-left: 1em; }
 .bottom-right {
     bottom: 0;
     right: 0;
+}
+
+
+
+// Alignment
+// -----------------------------------------------------------------------------------
+.valign {
+  @include vertical-align;
+}
+
+.valign-bottom {
+  vertical-align: bottom;
+}
+
+.alignleft {
+    float: left;
+    margin-right: 18px;
+    margin-bottom: 10px;
+}
+
+.alignright {
+    float: right;
+    margin-left: 18px;
+    margin-bottom: 10px;
 }
 
 

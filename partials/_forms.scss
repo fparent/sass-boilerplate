@@ -2,6 +2,44 @@
 // FORMS & ERRORS
 //************************************************************************************
 
+// Base Inputs
+// -----------------------------------------------------------------------------------
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    min-width: 100px;
+    height: 60px;
+    font-weight: 700;
+    font-size: 16px;
+    border: 0;
+    padding: 0 18px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance:    none;
+    appearance:         none;
+}
+
+
+// Placeholder
+// -----------------------------------------------------------------------------------
+::-webkit-input-placeholder {
+    color: #ddd;
+}
+::-moz-placeholder {
+    color: #ddd;
+}
+:-ms-input-placeholder {
+    color: #ddd;
+}
+:-moz-placeholder {
+    color: #ddd;
+}
 
 
 // Variables
@@ -27,14 +65,22 @@ fieldset {
 
 // Form entry
 // -----------------------------------------------------------------------------------
-//
 // Represent a single line of any forms
 // Can contain multiple inputs
-.field-container {
-  margin-bottom: 16px;
+.form-line {
+  display: block;
+  @include clearfix;
+  margin-bottom: 28px;
   position: relative;
 
   label {
+    display: block;
+    color: #161616;
+    margin-bottom: 2px;
+
+    & + br {
+      display: none;
+    }
 
     // Labels for requied fields are in bold
     &.required {

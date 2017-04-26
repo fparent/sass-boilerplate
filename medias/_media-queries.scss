@@ -2,67 +2,67 @@
 // MEDIA QUERIES
 //************************************************************************************
 
-
-// Smartphones (portrait and landscape)
+// Every mobile devices up to 960px (default wrapper size)
 // -----------------------------------------------------------------------------------
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media #{$medium-and-down} {
+    .mobile-only  { display: block !important; }
+    .desktop-only { display: none !important; }
 
-}
+    .wrapper { width: 100%; margin: 0 auto; }
 
-
-// Smartphones (landscape)
-// -----------------------------------------------------------------------------------
-@media only screen and (min-width : 321px) {
-
+    // Remove the padding inside the header
+    .site-header .inner-header,
+    .site-header,
+    .nav-main {
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0;
+    }
 }
 
 
 // Smartphones (portrait)
 // -----------------------------------------------------------------------------------
-@media only screen and (max-width : 320px) {
-
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+    .wrapper,
+    .wrapper.tight {
+        max-width: 300px;
+    }
 }
 
 
-// iPads (portrait and landscape)
-// -----------------------------------------------------------------------------------
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
 
+// Smartphones (landscape)
+// -----------------------------------------------------------------------------------
+@media only screen and (min-width : 481px) and (max-width : 600px) {
+    .wrapper { max-width: 480px; }
 }
 
 
-// iPads (landscape)
+// Tablets (portrait)
 // -----------------------------------------------------------------------------------
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-
+@media only screen and (min-width : 601px) and (max-width : 768px) {
+    .wrapper { max-width: 600px; }
 }
 
 
-// iPads (portrait)
+// Tablets (landscape)
 // -----------------------------------------------------------------------------------
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-
+@media only screen and (min-width : 769px) and (max-width : 960px) {
+    .wrapper { max-width: 600px; }
 }
 
 
-// Desktops and laptops
+// Desktop
 // -----------------------------------------------------------------------------------
-@media only screen and (min-width : 1224px) {
-
+@media #{$large-and-up} {
+    .mobile-only  { display: none !important; }
+    .desktop-only { display: block !important; }
 }
 
 
-// Large screens
+// INTERNET EXPLORER 10 & 11
 // -----------------------------------------------------------------------------------
-@media only screen and (min-width : 1824px) {
-
-}
-
-
-// iPhone 4 and high pixel ratio devices
-// -----------------------------------------------------------------------------------
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
-
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    body, .flex { display: block !important; }
 }
